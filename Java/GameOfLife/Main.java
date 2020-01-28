@@ -157,6 +157,7 @@ public class Main {
         int numberOfRow = 0;
         int numberOfColumn = 0;
         System.out.println("Input:");
+        System.out.println("How many cells alive?")
         int numberOfAliveCell = Integer.parseInt(scanner.nextLine());
 
         while(numberOfAliveCell > 0){
