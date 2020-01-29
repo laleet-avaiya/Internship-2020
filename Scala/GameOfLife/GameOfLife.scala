@@ -62,4 +62,26 @@ class GameOfLife(numberOfRows: Int, numberOfColumns: Int, listOfAliveCells: Arra
     gridString
   }
 
+  override def equals(obj: Any): Boolean = {
+    var equalResult = true
+
+    if(!(obj.isInstanceOf[GameOfLife]))
+      return false
+
+
+    val gameOfLifeObject = obj.asInstanceOf[GameOfLife]
+    val gridObj = gameOfLifeObject.getGrid()
+
+    if(numberOfRows != gridObj.length || numberOfColumns != gridObj(0).length)
+      return false
+
+    for(i <- 0 until numberOfRows)
+      {
+        for(j <- 0 until numberOfColumns){
+            if(grid(i)(j) != gridObj(i)(j))
+              equalResult = false
+        }
+      }
+    equalResult
+  }
 }
