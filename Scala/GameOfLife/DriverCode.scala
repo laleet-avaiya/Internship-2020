@@ -29,7 +29,6 @@ object Main {
   }
 
 
-
   def main(args: Array[String]): Unit = {
 
     var gameOfLife = startGameOfLife()
