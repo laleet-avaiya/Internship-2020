@@ -1,6 +1,6 @@
 import org.junit.{Assert, Test, After, Before}
 
-class GameOfLifeTest {
+class GameOfLifeTestJunit {
 
   @Test
   def nextGenerationTest = {
