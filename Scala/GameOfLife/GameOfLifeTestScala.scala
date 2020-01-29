@@ -2,7 +2,7 @@ import org.scalatest.FunSuite
 
 class GameOfLifeTestScala extends FunSuite {
 
-  test("nextGenerationTest") {
+  test("nextGeneration") {
     var gameOfLife = new GameOfLife(4,4 , Array(Array(1,1),Array(1,2),Array(2,1),Array(2,2)))
     var nextGenerationGameOfLifeExpected = new GameOfLife(4,4 , Array(Array(1,1),Array(1,2),Array(2,1),Array(2,2)))
     assert(nextGenerationGameOfLifeExpected === gameOfLife.nextGeneration())
@@ -20,13 +20,13 @@ class GameOfLifeTestScala extends FunSuite {
     assert(nextGenerationGameOfLifeExpected != gameOfLife.nextGeneration())
   }
 
-  test("notEqualGameOfLifeTest") {
+  test("notEqualGameOfLife") {
     var gameOfLife1 = new GameOfLife(4,4 , Array(Array(1,1),Array(1,2),Array(2,1),Array(2,2)))
     var gameOfLife2 = new GameOfLife(1,1, Array())
     assert(gameOfLife1 != gameOfLife2)
   }
 
-  test("equalGameOfLifeTest") {
+  test("equalGameOfLife") {
     var gameOfLife1 = new GameOfLife(1,1 , Array())
     var gameOfLife2 = new GameOfLife(1,1, Array())
     assert(gameOfLife1 === gameOfLife2)
