@@ -20,4 +20,18 @@ class GameOfLifeTest {
     nextGenerationGameOfLifeExpected = new GameOfLife(3,3, Array(Array(1,1),Array(0,1),Array(2,1)))
     Assert.assertNotEquals(nextGenerationGameOfLifeExpected, gameOfLife.nextGeneration())
   }
+
+  @Test
+  def notEqualGameOfLifeTest: Unit ={
+    var gameOfLife1 = new GameOfLife(4,4 , Array(Array(1,1),Array(1,2),Array(2,1),Array(2,2)))
+    var gameOfLife2 = new GameOfLife(1,1, Array())
+    Assert.assertNotEquals(gameOfLife1,gameOfLife2)
+  }
+
+  @Test
+  def equalGameOfLifeTest: Unit ={
+    var gameOfLife1 = new GameOfLife(1,1 , Array())
+    var gameOfLife2 = new GameOfLife(1,1, Array())
+    Assert.assertEquals(gameOfLife1,gameOfLife2)
+  }
 }
