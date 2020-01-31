@@ -1,0 +1,148 @@
+----------------
+Scala Collection
+----------------
+
+Scala provides rich set of collection library. 
+It contains classes and traits to collect data. 
+These collections can be mutable or immutable. 
+You can use them according to your requirement. 
+
+Scala.collection.mutable 
+------------------------
+package contains all the mutable collections. You can add, remove and update data while using this package.
+
+Scala.collection.immutable  
+--------------------------
+package contains all the immutable collections. 
+It does not allow you to modify data. Scala imports this package by default. 
+If you want mutable collection, you must import scala.collection.mutable package in your code.
+
+
+                              Traversable
+                                    |
+                                Iterable
+            ___________________________________________________
+           Set                    Seq                         Map
+           |                _______________                    |
+           |               |               |                   |
+        HashSet         IndexSeq        LinearSeq           HashMap
+        BitSet             |               |                ListMap
+        ListSet            |               |                TreeMap
+        TreeSet         Vector            List
+                        NumericRange      Stream
+                        String            Queue
+                        Range             Stack
+
+*** Scala Set ***
+
+It is used to store unique elements in the set. 
+It does not maintain any order for storing elements. 
+You can apply various operations on them. 
+It is defined in the Scala.collection.immutable package.
+
+
+*** Scala SortedSet ***
+
+In scala, SortedSet extends Set trait and provides sorted set elements. 
+It is useful when you want sorted elements in the Set collection. 
+You can sort integer values and string as well.
+It is a trait and you can apply all the methods defined in the traversable trait and Set trait.
+
+
+*** Scala HashSet ***
+
+HashSet is a sealed class. It extends AbstractSet and immutable Set trait. 
+It uses hash code to store elements.
+
+*** Scala BitSet ***
+
+Bitsets are sets of non-negative integers which are represented as variable-size arrays of bits packed into 64-bit words. 
+The memory footprint of a bitset is determined by the largest number stored in it. It extends Set trait.
+
+*** Scala ListSet ***
+
+In scala, ListSet class implements immutable sets using a list-based data structure. 
+Elements are stored internally in reversed insertion order, which means the newest element is at the head of the list. 
+It maintains insertion order.
+This collection is suitable only for a small number of elements. 
+You can create empty ListSet either by calling the constructor or by applying the function ListSet.empty. 
+Its iterate and traversal methods visit elements in the same order in which they were first inserted.
+
+
+*** Scala Seq ***
+
+Seq is a trait which represents indexed sequences that are guaranteed immutable. 
+You can access elements by using their indexes. It maintains insertion order of elements.
+Sequences support a number of methods to find occurrences of elements or subsequences. 
+It returns a list.
+
+
+def contains[A1 >: A](elem: A1)     : Boolean	Check whether the given element present in this sequence.
+def copyToArray(xs: Array[A], start : Int, len: Int): Unit	It copies the seq elements to an array.
+def endsWith[B](that: GenSeq[B])    : Boolean	It tests whether this sequence ends with the given sequence or not.
+def head : A	                    : It selects the first element of this seq collection.
+def indexOf(elem: A): Int	        : It finds index of first occurrence of a value in this immutable sequence.
+def isEmpty: Boolean	            : It tests whether this sequence is empty or not.
+def lastIndexOf(elem: A): Int	    : It finds index of last occurrence of a value in this immutable sequence.
+def reverse: Seq[A]	                : It returns new sequence with elements in reversed order.
+
+
+*** Scala Vector ***
+
+Vector is a general-purpose, immutable data structure. 
+It provides random access of elements. It is good for large collection of elements.
+It extends an abstract class AbstractSeq and IndexedSeq trait.
+
+
+*** Scala List ***
+
+List is used to store ordered elements. It extends LinearSeq trait. 
+It is a class for immutable linked lists. This class is good for last-in-first-out (LIFO), stack-like access patterns.
+
+*** Scala Stack ***
+
+A stack is a data structure that follows the last-in, first-out(LIFO) principle. 
+We can add or remove element only from one end called top. S
+cala has both mutable and immutable versions of a stack.
+     
+*** Scala Queue ***
+
+Queue implements a data structure that allows inserting and retrieving elements in a first-in-first-out (FIFO) manner.
+In scala, Queue is implemented as a pair of lists. One is used to insert the elements and second to contain deleted elements. 
+Elements are added to the first list and removed from the second list.
+
+
+*** Scala Stream ***
+
+Stream is a lazy list. It evaluates elements only when they are required. 
+This is a feature of scala. Scala supports lazy computation. It increases performance of your program.
+
+
+*** Scala Maps ***
+
+Map is used to store elements. It stores elements in pairs of key and values. 
+In scala, you can create map by using two ways either by using comma separated pairs or by using rocket operator.
+
+
+*** Scala HashMap ****
+
+HashMap is used to store element. It use hash code to store elements and return a map.
+
+
+*** Scala ListMap ***
+
+This class implements immutable maps by using a list-based data structure. 
+It maintains insertion order and returns ListMap. This collection is suitable for small elements.
+You can create empty ListMap either by calling its constructor or using ListMap.empty method.
+
+*** Scala Tuples ***
+A tuple is a collection of elements in ordered form. 
+If there is no element present, it is called empty tuple. 
+You can use tuple to store any type of data. 
+You can store similar type or mix type data also. 
+You can use it to return multiple values from a function
+
+
+Function Return Multiple Values:
+
+You can return multiple values by using tuple. Function does not return multiple values but you can do this with the help of tuple.
