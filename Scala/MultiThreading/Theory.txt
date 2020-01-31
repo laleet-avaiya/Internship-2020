@@ -1,0 +1,53 @@
+--------------------
+Scala Multithreading
+--------------------
+
+Multithreading is a process of executing multiple threads simultaneously.
+It allows you to perform multiple operations independently.
+You can achieved multitasking by using Multithreading.
+Threads are lightweight sub-processes which occupy less memory.
+Multithreading are used to develop concurrent applications in Scala.
+
+Scala does not provide any separate library for creating thread.
+If you are familiar with multithreading concept of Java, you will come to know that it is similar except the syntax of Scala language itself.
+
+You can create thread either by extending Thread class or Runnable interface.
+Both provide a run method to provide specific implementation.
+
+------------------------
+Scala Thread Life Cycle
+------------------------
+
+Thread life cycle is a span of time in which thread starts and terminates.
+It has various phases like new, runnable, terminate, block etc. Thread class provides various methods to monitor thread's states.
+
+The Scala thread states are as follows:
+
+New                     : This is the first state of thread. It is just before starting of new thread.
+Runnable                : This is the state when thread has been started but the thread scheduler has not selected it to be the running thread.
+Running                 : The thread is in running state if the thread scheduler has selected it.
+Non-Runnable (Blocked)  : This is the state when the thread is still alive, but is currently not eligible to run due to waiting for input or resources.
+Terminated              : A thread is in terminated or dead state when its run() method exits.
+
+
+There are two ways to create a thread:
+
+1. By extending Thread class
+2. By implementing Runnable interface
+
+--------------------
+Scala Thread Methods
+--------------------
+
+public final String getName()	It returns thread's name.
+public final int getPriority()	It returns thread's priority.
+public Thread.State getState()	It returns the state of this thread. This method is designed for use in monitoring of the system state, not for synchronization control.
+public final boolean isAlive()	It tests if this thread is alive. A thread is alive if it has been started and has not yet died.
+
+public final void join() throws InterruptedException	It Waits for thread to die.
+public void run()	                                    If this thread was constructed using a separate Runnable run object, then that Runnable object's run method is called; otherwise, this method does nothing and returns.
+public final void setName(String name)	                It is used to set thread name.
+public final void setPriority(int newPriority)	        It is used to set priority of a thread.
+
+public static void sleep(long millis) throws InterruptedException	It is used to sleep executing thread for the specified number of milliseconds.
+public static void yield()	It causes the currently executing thread object to temporarily pause and allow other threads to execute.

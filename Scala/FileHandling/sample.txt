@@ -1,0 +1,11 @@
+              Scala File handling
+
+Scala provides predefined methods to deal with file.
+You can create, open, write and read file.
+Scala provides a complete package scala.io for file handling.
+
+Scala Read File
+We can use scala.io.Source to read data from a file. For reading a file, we have created a test file with below content.
+
+Scala Write to File
+Scala standard library doesn’t contain any classes to write files, so we will use Java IO classes for scala write to file.
